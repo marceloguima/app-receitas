@@ -10,18 +10,18 @@ const Header = () => {
         <header>
             <nav>
                 <div className="logo" >
-                  um logo aqui
+                  um logo aqui  
                   </div>
                 <ul className="nav-links">
                     <li>
-                        <NavLink to="/">Home</NavLink>
+                        <NavLink to="/" className={({isActive}) => isActive ? "link-ativo" :""}>Home</NavLink>
                     </li>
-                    <li><a href="sobremesas">Sobremesas</a></li>
+                    <li><a href="sobremesas"className={({isActive}) => isActive ? "link-ativo" :""}>Sobremesas</a></li>
                     <li><a href="entradas">Entradas</a></li>
                     <li><a href="Prato-principal">Prato principal</a></li>
 
                     <li>
-                        <NavLink to="/ia">Crie com a IA</NavLink>
+                        <NavLink to="/ia" className={({isActive}) => isActive ? "link-ativo" :""}>Crie com a IA</NavLink>
                     </li>
                 </ul>
 

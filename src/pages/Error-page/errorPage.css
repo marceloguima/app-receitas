@@ -1,0 +1,14 @@
+.pg-error{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.pg-error img{
+    width: 500px;
+    margin-top: 20px;
+    border-radius: 20px;
+}

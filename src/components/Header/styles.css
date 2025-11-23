@@ -30,6 +30,11 @@ nav{
    font-weight: 500;
 }
 
+a.link-ativo{
+   border-bottom: 2px solid white;
+}
+
+
 .form-buscar{
    display: flex;
    align-items: center;
