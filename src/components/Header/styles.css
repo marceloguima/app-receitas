@@ -1,0 +1,63 @@
+header{
+   width: 100%;
+   background: #ee6307;
+   height: 80px;
+   padding: 0 40px;
+   position: fixed;
+}
+
+nav{
+   height: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  
+}
+
+.nav-links{
+   display: flex;
+   gap: 50px;
+}
+
+.nav-links li{
+   list-style: none;
+}
+
+.nav-links a{
+   color: white;
+   text-decoration: none;
+   font-size: 1.1rem;
+   font-weight: 500;
+}
+
+.form-buscar{
+   display: flex;
+   align-items: center;
+   width: 300px;
+   height: 35px;
+   border-radius: 5px;
+   background: #ffff;
+   
+}
+
+.barra-busca{
+   flex: 1;
+   height: 100%;
+   border: none;
+   background: transparent;
+   padding: 0 10px;
+   font-size: 1rem;
+ 
+}  
+
+.btn-buscar{
+   width: 35px;
+   height: 100%;
+   border: none;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 1.2rem;
+   border-radius: 0 5px 5px 0;
+}
