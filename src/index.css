@@ -7,3 +7,13 @@ body {
     margin: 0;
     font-family: system-ui, -apple-system, sans-serif;
 }
+
+
+:root {
+    --cor-primaria: #ee6307;
+    --cor-secundaria: #ffcdb6;
+    --cor-fundo: #f7eeea;
+    --cor-texto1: #333333;
+    --cor-texto2: #f7f7f7;
+    --borda1: #ccc;
+}

@@ -2,37 +2,20 @@ header{
    width: 100%;
    background: #ee6307;
    height: 80px;
-   padding: 0 40px;
+   padding: 0 2%;
    position: fixed;
+   z-index: 3;
 }
 
 nav{
    height: 100%;
+   padding: 0 50px ;
    display: flex;
    justify-content: space-between;
    align-items: center;
   
 }
 
-.nav-links{
-   display: flex;
-   gap: 50px;
-}
-
-.nav-links li{
-   list-style: none;
-}
-
-.nav-links a{
-   color: white;
-   text-decoration: none;
-   font-size: 1.1rem;
-   font-weight: 500;
-}
-
-a.link-ativo{
-   border-bottom: 2px solid white;
-}
 
 
 .form-buscar{
