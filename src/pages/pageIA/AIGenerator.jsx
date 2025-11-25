@@ -1,10 +1,13 @@
 import React from "react";
 import { useState } from "react";
-import Header from "../../components/Header";
+import AISidebar from "../../components/AISidebar";
 import ListaMensagens from "../../components/ListaMensagens";
 import { api } from "../../conetaAxios/api";
 
+
 import { BiLoaderAlt } from "react-icons/bi";
+import { PiChefHat } from "react-icons/pi";
+
 
 
 import "./AIGenerator.css";
@@ -46,11 +49,9 @@ export default function AIRecipeGenerator() {
             console.log("Resposta da API:", resposta);
             // ________________________________________________________________________
             const novaMensagemIA = {
-                id: Date.now() + 1, // Garante que o ID da IA é único
+                id: Date.now() + 1, 
                 remetente: "ia",
-                // A sua API Express retorna {resposta: 'texto da receita'}, então acessamos .resposta
-                // Se a 'api' retornar diretamente o JSON data, use resposta.resposta
-                // Se a 'api' retornar a resposta do axios, use resposta.data.resposta
+             
                 texto:
                     resposta ||
                     "Desculpe, não consegui gerar a receita.",
@@ -80,8 +81,8 @@ export default function AIRecipeGenerator() {
 
     return (
         <>
-            <Header />
-
+            <AISidebar />
+{/* {sidBarOpen ? "chat-sid-bar-open" : "chat-sid-bar-close"} */}
             <main className="chat">
                 <ListaMensagens mensagens={mensagens} />
                 <SaidaMensagem
@@ -93,6 +94,7 @@ export default function AIRecipeGenerator() {
 
                 {loading && (
                     <div className="loading-overlay">
+                        <PiChefHat className="hat-chef" />
                        <BiLoaderAlt className="spinner"/>
                         <p>Gerando sua receita aguarde...</p>
                         <div className="spinner"></div> 

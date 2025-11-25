@@ -1,0 +1,59 @@
+.sid-bar-close,
+.sid-bar-open {
+    height: 100vh;
+    background: var(--quinta-cor);
+    padding: 10px;
+    border-right: solid 4px var(--cor-primaria);
+    position: fixed;
+}
+
+.sid-bar-open {
+    width: 250px;
+    transition: ease-out .3s;
+}
+
+.sid-bar-close {
+    width: 50px;
+    transition: ease-out .3s;
+}
+
+.logo {
+    margin-bottom: 40px;
+}
+
+.btn-open-sid-bar,
+.btn-nova-receita,
+.btn-historico,
+.links {
+    background: transparent;
+    border: none;
+    color: var(--cor-texto1);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.list-sid-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.icon-nova-receita,
+.icon-historico,
+.icon-home,
+.btn-open-sid-bar {
+    font-size: 1.6rem;
+}
+
+.lista-historico{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}

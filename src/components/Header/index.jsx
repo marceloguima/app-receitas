@@ -14,7 +14,6 @@ const Header = () => {
         <header>
             <nav>
                 <div className="logo">um logo aqui</div>
-
                 <form className="form-buscar">
                     <input
                         type="text"
