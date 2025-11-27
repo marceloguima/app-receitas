@@ -1,0 +1,46 @@
+.hero {
+    width: 100%;
+    /* position: relative; */
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.circulo {
+    background: var(--cor-primaria);
+    width: 60%;
+    height: 120%;
+    position: absolute;
+    right: -9%;
+    top: -35%;
+    border-radius: 10% 0 0 60%;
+    display: flex;
+    align-items: end;
+}
+
+.content-left {
+    margin-top: 200px;
+    width: 50%;
+    height: 500px;
+    padding-left: 3%;
+}
+
+.content-left h1 {
+    font-size: 3rem;
+}
+
+
+.pratos-entrada{
+    width: 100vw;
+    /* margin-top: 300px; */
+ 
+}
+
+.cards_card{
+    width: 100%;
+    display: flex;
+    padding: 40px;
+    gap: 30px;
+    justify-content: center;
+
+    
+}

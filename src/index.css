@@ -21,3 +21,8 @@ body {
     --borda1: #ccc;
 }
 
+.container{
+    /* display: flex; */
+    height: 100%;
+    width: 100vw;
+}

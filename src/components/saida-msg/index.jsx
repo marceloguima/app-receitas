@@ -15,7 +15,7 @@ const handleSubmit = (e) => {
 }
 
     return (
-        <div className="area-entrada-chat">
+        <div className="area-saida-chat">
             <form  onSubmit={handleSubmit} >
                 <input
                     type="text"

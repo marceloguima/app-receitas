@@ -4,11 +4,11 @@
     background: var(--quinta-cor);
     padding: 10px;
     border-right: solid 4px var(--cor-primaria);
-    position: fixed;
+    /* position: fixed; */
 }
 
 .sid-bar-open {
-    width: 250px;
+    min-width: 250px;
     transition: ease-out .3s;
 }
 

@@ -1,26 +1,38 @@
 main.chat {
-    background: transparent;
+    width: 100%;
+    max-width: 1086px;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 120px 20px 170px 20px;
+    justify-content: space-between;
+    margin: 0 14%;
+    padding-bottom: 20px;
+}
+
+.area-chat{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    padding: 0 20px;
+scrollbar-width: none;
 }
 
 .caixa-texto.user {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 20px;
+    padding-right: 40px;
 }
 
 .caixa-texto.ia {
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 20px;
+    padding-left: 40px;
+    margin: 60px 0 20px 0 ;
 }
 
 .caixa-texto {
-    width: 80%;
     padding: 20px;
     position: relative;
     background: transparent !important;
@@ -29,35 +41,36 @@ main.chat {
 }
 
 .mensagem {
-    width: 50%;
     padding: 15px;
     box-shadow: 0 2px 4px #00000046;
 }
 
 .user {
-    background-color: #f7eeea;
+    background-color: var(--quinta-cor);
     border-radius: 30px 0 30px 30px;
     border: solid 1px #fc4c07;
 }
 
 .ia {
-    background-color: #e2e2e2;
+    background-color: var(--quarta-cor);
     border-radius: 0 30px 30px 30px;
     border: solid 1px #b5b5b5;
 }
 
 .avatar-ia {
-    width: 60px;
+    width: 40px;
     position: absolute;
-    top: -50px;
-    left: -60px;
+    top: -40px;
+    left: 0;
+    filter: drop-shadow(2px  6px  14px  #525252);
 }
 
 .avatar-user {
-    width: 60px;
+    width: 40px;
     position: absolute;
-    top: -50px;
-    right: -60px;
+    bottom: 60px;
+    right: 0;
+     filter: drop-shadow(2px  6px  14px  #525252);
 }
 
 /* ------------------------------------- */
@@ -109,31 +122,24 @@ animation:animaTexto 1s alternate infinite;
         opacity: 1;
     }
 }
-/* 
-.barra-lateral{
-    width: 20%;
-    height: 100vh;
-    background: var(--cor-primaria);
-    position: fixed;
-    top: 0;
-    left: 0;
-} */
+
+
 
 
 /* ---------------------------------------------------- */
 
 @media (max-width: 1200px) {
-    .mensagem.user,
+    /* .mensagem.user,
     .mensagem.ia {
         width: 70%;
-    }
+    } */
 }
 
 @media (max-width: 768px) {
-    .mensagem.user,
+    /* .mensagem.user,
     .mensagem.ia {
         width: 90%;
-    }
+    } */
 
     .avatar {
         width: 50px;
@@ -148,10 +154,10 @@ animation:animaTexto 1s alternate infinite;
 }
 
 @media (max-width: 480px) {
-    .mensagem.user,
+    /* .mensagem.user,
     .mensagem.ia {
         width: 100%;
-    }
+    } */
 
     .avatar {
         width: 40px;

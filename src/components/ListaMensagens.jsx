@@ -13,7 +13,7 @@ const ListaMensagens = ({ mensagens }) => {
                         alt={`imagem representando o ${mensagem.remetente}`}
                         className={`avatar-${mensagem.remetente}`}
                     />
-                    <div className={`mensagem ${mensagem.remetente}`}>
+                <div className={`mensagem ${mensagem.remetente}`}>
                         <p>{mensagem.texto}</p>
                     </div>
                 </div>
