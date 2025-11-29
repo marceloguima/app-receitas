@@ -2,13 +2,13 @@
 /* input */
 .area-saida-chat{
     /* position: fixed; */
-  
     width: 100%;
     max-width: 1080px;
     border-radius: 20px;
     padding: 10px ;
     border: solid 1px #ccc;
     box-shadow: 0 2px 4px #00000046;
+    z-index: 5;
 }
 
 .area-saida-chat input{

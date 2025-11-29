@@ -21,9 +21,7 @@ const Menu = () => {
                 <li>
                     <NavLink
                         to="/"
-                        className={({ isActive }) =>
-                            isActive ? "link-ativo" : ""
-                        }
+                        
                     >
                         Home
                     </NavLink>
@@ -41,9 +39,7 @@ const Menu = () => {
                 <li>
                     <NavLink
                         to="/ia"
-                        className={({ isActive }) =>
-                            isActive ? "link-ativo" : ""
-                        }
+                        className="link-ia"
                     >
                         Crie com a IA
                     </NavLink>

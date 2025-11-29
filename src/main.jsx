@@ -5,6 +5,7 @@ import App from "./App";
 import ErrorPage from "./pages/Error-page/ErrorPage";
 import Home from "./pages/Home/Home";
 import AIGenerator from "./pages/pageIA/AIGenerator";
+import DetalhesReceita from "./pages/detalhes-receita";
 
 import "./index.css";
 
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
             {
                 path: "/ia",
                 element: <AIGenerator />,
+            },
+
+              {
+                path: "/detalhes",
+                element: <DetalhesReceita />,
             },
         ],
     },

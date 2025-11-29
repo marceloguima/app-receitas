@@ -41,10 +41,9 @@ function togleSideBar() {
                     </button>
                 </li>
                 <li>
-                    <button className="btn-historico">
-                        <RiFileList3Line className="icon-historico" />
-                        {sidBarOpen ? " Histórico de receitas" : ""}
-                    </button>
+                    <p className="historico">
+                        {sidBarOpen ? "Histórico" : "" } 
+                    </p>
                 </li>
             </ul>
             {sidBarOpen ? (

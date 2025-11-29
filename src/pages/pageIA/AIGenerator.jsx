@@ -5,7 +5,7 @@ import ListaMensagens from "../../components/ListaMensagens";
 import { api } from "../../conetaAxios/api";
 
 import { BiLoaderAlt } from "react-icons/bi";
-import { PiChefHat } from "react-icons/pi";
+// import { PiChefHat } from "react-icons/pi";
 
 import "./AIGenerator.css";
 
@@ -83,7 +83,7 @@ export default function AIRecipeGenerator() {
 
                 {loading && (
                     <div className="loading-overlay">
-                        <PiChefHat className="hat-chef" />
+                        {/* <PiChefHat className="hat-chef" /> */}
                         <BiLoaderAlt className="spinner" />
                         <p>Gerando sua receita aguarde...</p>
                         <div className="spinner"></div>

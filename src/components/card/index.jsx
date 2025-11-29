@@ -24,7 +24,7 @@ const Card = () => {
                 </div>
             </div>
             <div className="div-btn-link">
-                <NavLink>Ver receita</NavLink>
+                <NavLink to="/detalhes">Ver receita</NavLink>
             </div>
         </div>
     );

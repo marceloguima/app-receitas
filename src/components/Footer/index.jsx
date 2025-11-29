@@ -1,3 +1,0 @@
-/*
-  Arquivo placeholder para o componente Footer
-*/
