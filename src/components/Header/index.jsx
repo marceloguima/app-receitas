@@ -7,25 +7,28 @@ import { FaSearch } from "react-icons/fa";
 
 import "./styles.css";
 
-const Header = () => {
-
-
+const Header = (props) => {
     return (
         <header>
             <nav>
                 <div className="logo">um logo aqui</div>
-                <form className="form-buscar">
+                <form className="form-buscar" onSubmit={props.onSubmit}>
                     <input
                         type="text"
                         placeholder="Buscar receitas..."
                         className="barra-busca"
-                        />
-                    <button type="submit" className="btn-buscar">
+                        value={props.value}
+                        onChange={(e) => props.onChange(e.target.value)}
+                    />
+                    <button
+                        type="submit"
+                        className="btn-buscar"
+                    >
                         <FaSearch />
                     </button>
                 </form>
 
-             <Menu />
+                <Menu />
             </nav>
         </header>
     );

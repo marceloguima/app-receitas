@@ -19,7 +19,7 @@ const Card = (props) => {
                         {props.tempoPreparo}
                     </p>
                     <p>
-                        <FiUsers />{props.quntPorcoes}
+                        <FiUsers />{props.quantPorcoes}
                     </p>
                 </div>
             </div>

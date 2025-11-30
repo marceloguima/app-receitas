@@ -23,11 +23,11 @@ export const perguntaReceita = async (req, res) => {
 const receitasMocadas = [
     {
         id: 1,
-        titulo: "Prato principal",
+        titulo: "Bife acebolado",
         categoria: "prato principal",
         tempoPreparo: 30,
         porcoes: 4,
-        imagem: "https://via.placeholder.com/400x300?text=Bife+acebolado",
+        imagem: "https://cdn.pixabay.com/photo/2016/09/15/06/16/rumpsteak-1671069_960_720.jpg",
     },
 
     {
@@ -36,18 +36,18 @@ const receitasMocadas = [
         categoria: "Acompanhamento",
         tempoPreparo: 25,
         porcoes: 4,
-        imagem: "https://via.placeholder.com/400x300?text=Arroz",
+        imagem: "https://cdn.pixabay.com/photo/2018/07/13/00/14/rice-3534664_640.jpg",
     },
 ];
 
-export const listarReceitas = (req, res) => {
+export const  listarReceitas = (req, res) => {
     const q = (req.query.q || "").toLowerCase().trim();
 
     let resultado = receitasMocadas;
 
     if (q) {
-        resultado = receitasMocadas.filter(() =>
-            receitasMocadas.titulo.toLowerCase().inclides(q)
+        resultado = receitasMocadas.filter((receita) =>
+            receita.titulo.toLowerCase().includes(q)
         );
     }
     res.json(resultado)

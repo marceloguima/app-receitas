@@ -1,4 +1,11 @@
-/*
-  Arquivo placeholder para o componente Loader
-  - Props sugeridas: size, inline
-*/
+// import React from 'react'
+
+// const Loading = () => {
+//       const [loading, setLoading] = useState(false);
+
+//   return (
+   
+//   )
+// }
+
+// export default Loading
