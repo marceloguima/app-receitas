@@ -22,40 +22,28 @@ export default function Home() {
                     <h2>Entradas</h2>
                     <div className="cards_card">
                         <Card />
-                        <Card />
-                        <Card />
-                        <Card />
                     </div>
-                </section>
-                <section className="pratos-entrada">
-                    <h2>Pratos principais</h2>
-                    <div className="cards_card">
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                    </div>
-                </section>
-                <section className="pratos-entrada">
-                    <h2>Sobremesas</h2>
-                    <div className="cards_card">
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                    </div>
-                </section>
-                <section className="pratos-entrada">
-                    <h2>Bebidas</h2>
-                    <div className="cards_card">
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                    </div>
-                </section>
 
-              
+                    {/* abaixo é o componente card */}
+                    {/*  <div className="card">
+                                <img src={props.src} className="img-card" alt={props.alt} />
+                                <div className="info-card">
+                                    <h3>{props.titulo}</h3>
+                                    <div className="temp-rend">
+                                        <p>
+                                            <FaRegClock />
+                                            {props.tempoPreparo}
+                                        </p>
+                                        <p>
+                                            <FiUsers />{props.quntPorcoes}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="div-btn-link">
+                                    <NavLink to="/detalhes">Ver receita</NavLink>
+                                </div>
+                            </div> */}
+                </section>
             <footer>
                 <p>Footer</p>
             </footer>

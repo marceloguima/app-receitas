@@ -7,19 +7,19 @@ import { FiUsers } from "react-icons/fi";
 
 import "./style.css";
 
-const Card = () => {
+const Card = (props) => {
     return (
         <div className="card">
-            <img src="./publica/img-card2.png" className="img-card" alt="" />
+            <img src={props.src} className="img-card" alt={props.alt} />
             <div className="info-card">
-                <h3>Lorem, ipsum dolor.</h3>
+                <h3>{props.titulo}</h3>
                 <div className="temp-rend">
                     <p>
                         <FaRegClock />
-                        30 min.
+                        {props.tempoPreparo}
                     </p>
                     <p>
-                        <FiUsers />4 porções
+                        <FiUsers />{props.quntPorcoes}
                     </p>
                 </div>
             </div>

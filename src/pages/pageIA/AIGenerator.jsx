@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import AISidebar from "../../components/AISidebar";
 import ListaMensagens from "../../components/ListaMensagens";
-import { api } from "../../conetaAxios/api";
+import { apiIA } from "../../conetaAxios/apiIA";
 
 import { BiLoaderAlt } from "react-icons/bi";
 // import { PiChefHat } from "react-icons/pi";
@@ -41,7 +41,7 @@ export default function AIRecipeGenerator() {
 
         // _______________________________________________________________________
         try {
-            const resposta = await api(mensagem);
+            const resposta = await apiIA(mensagem);
             console.log("Resposta da API:", resposta);
             // ________________________________________________________________________
             const novaMensagemIA = {
