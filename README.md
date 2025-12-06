@@ -1,27 +1,31 @@
-# App Receitas
+## 🖼️ Preview das telas
 
-Aplicação web para buscar, explorar e **gerar receitas com IA** de forma simples e visual. O projeto é dividido em **frontend** (React) e **backend** (Node/Express), que consome uma API pública de receitas e expõe também uma rota para geração de receitas via modelo de IA.[web:78]
+### Home – listagem e busca de receitas
+
+Tela inicial com barra de busca, destaque visual e cards de receitas retornadas pela API externa.
+
+![Home com receitas do dia](./docs/1tela.jpg)
 
 ---
 
-## 🧩 Visão geral do projeto
+### Home – resultado de busca
 
-O **App Receitas** permite que o usuário:
+Após buscar por um termo (ex.: “frango”), a home exibe apenas as receitas correspondentes ao filtro.
 
-- Veja uma listagem de receitas em cards, com imagem, título e informações básicas.  
-- Busque receitas usando a barra de pesquisa na home (por nome ou tipo).  
-- Acesse uma área específica de **“Crie com a IA”**, onde o usuário informa ingredientes ou uma ideia de prato e recebe uma receita completa gerada dinamicamente.  
+![Resultado de busca por frango](./docs/2tela.jpg)
 
-### Arquitetura
+---
 
-- **Frontend (React)**  
-  - Páginas: Home (lista + busca), página da IA, página de detalhes (breve).  
-  - Componentes: Header com barra de busca, cards de receita, componentes de loading/skeleton, etc.  
-  - Consome as rotas do backend `/api/receitas` via Axios.
+### Assistente de IA – receita gerada
 
-- **Backend (Node + Express)**  
-  - `GET /api/receitas` → lista/busca receitas consumindo a API-Receitas (`https://api-receitas-pi.vercel.app`).[web:78]  
-  - `POST /api/receitas` → recebe uma `pergunta` (prompt do usuário) e chama uma função utilitária que integra com o modelo de IA para gerar uma receita completa (nome, ingredientes, modo de preparo, dicas etc.).  
-  - Faz o papel de “orquestrador”, isolando o front dos detalhes da API externa e da IA.
+Tela do assistente de receitas com IA, onde o usuário envia uma mensagem (por exemplo, “bife”) e recebe uma receita detalhada gerada automaticamente.
 
+![Chat com IA mostrando receita de bife](./docs/3tela.jpg)
 
+---
+
+### Assistente de IA – estado de carregamento
+
+Enquanto a IA está gerando a receita, a interface mostra um estado de “gerando sua receita, aguarde...”.
+
+![Tela de carregamento da IA](./docs/4tela.jpg)
