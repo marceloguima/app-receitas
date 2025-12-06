@@ -25,7 +25,7 @@ Após buscar por um termo (ex.: "frango"), a home exibe apenas as receitas corre
 
 Enquanto a IA está gerando a receita, a interface mostra um estado de "gerando sua receita, aguarde...".
 
-![Tela de carregamento da IA](./docs/tela4.png)
+![Tela de carregamento da IA](./docs/tela3.png)
 
 ---
 
@@ -33,4 +33,4 @@ Enquanto a IA está gerando a receita, a interface mostra um estado de "gerando 
 
 Tela do assistente de receitas com IA, onde o usuário envia uma mensagem (por exemplo, "bife") e recebe uma receita detalhada gerada automaticamente.
 
-![Chat com IA mostrando receita de bife](./docs/tela3.png)
+![Chat com IA mostrando receita de bife](./docs/tela4.png)
