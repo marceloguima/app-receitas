@@ -13,7 +13,7 @@ const Card = (props) => {
             <img src={props.src} className="img-card" alt={props.alt} />
             <div className="info-card">
                 <h3>{props.titulo}</h3>
-                <div className="temp-rend">
+                {/* <div className="temp-rend">
                     <p>
                         <FaRegClock />
                         {props.tempoPreparo}
@@ -21,7 +21,7 @@ const Card = (props) => {
                     <p>
                         <FiUsers />{props.quantPorcoes}
                     </p>
-                </div>
+                </div> */}
             </div>
             <div className="div-btn-link">
                 <NavLink to="/detalhes">Ver receita</NavLink>

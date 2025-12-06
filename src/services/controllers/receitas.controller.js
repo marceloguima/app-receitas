@@ -1,4 +1,5 @@
 import { obterReceita } from "../util.js";
+import axios from "axios";
 
 export const perguntaReceita = async (req, res) => {
     try {
@@ -20,35 +21,59 @@ export const perguntaReceita = async (req, res) => {
     }
 };
 
-const receitasMocadas = [
-    {
-        id: 1,
-        titulo: "Bife acebolado",
-        categoria: "prato principal",
-        tempoPreparo: 30,
-        porcoes: 4,
-        imagem: "https://cdn.pixabay.com/photo/2016/09/15/06/16/rumpsteak-1671069_960_720.jpg",
-    },
-
-    {
-        id: 2,
-        titulo: "Arroz básico soltinho",
-        categoria: "Acompanhamento",
-        tempoPreparo: 25,
-        porcoes: 4,
-        imagem: "https://cdn.pixabay.com/photo/2018/07/13/00/14/rice-3534664_640.jpg",
-    },
-];
-
-export const  listarReceitas = (req, res) => {
+export const listarReceitas = async (req, res) => {
     const q = (req.query.q || "").toLowerCase().trim();
 
-    let resultado = receitasMocadas;
+    // if (!q) {
+    //     return res.json([]);
+    // }
 
-    if (q) {
-        resultado = receitasMocadas.filter((receita) =>
-            receita.titulo.toLowerCase().includes(q)
+    try {
+        const response = await axios.get(
+            // "https://www.themealdb.com/api/json/v1/1/search.php?s=",
+            "https://api-receitas-pi.vercel.app/receitas/todas",
+
+            { params: { s : q } }
         );
+
+        // const meals = response.data.meals || [];
+
+        // const receitas = meals.map((meal) => ({
+        //     id: meal.idMeal,
+        //     titulo: meal.strMeal,
+        //     categoria: meal.strCategory,
+        //     // tempoPreparo: meal.tempoPreparo,
+        //     // porcoes: meal.porcoes,
+        //     imagem: meal.strMealThumb,
+        // }));
+
+ const items = Array.isArray(response.data)
+      ? response.data
+      : response.data.items || [];
+
+ const filtrados = q
+      ? items.filter((item) =>
+          (item.receita || "").toLowerCase().includes(q) ||
+          (item.tipo || "").toLowerCase().includes(q)
+        )
+      : items;
+
+    const receitas = filtrados.map((item) => ({
+      id: item.id,
+      titulo: item.receita,
+      categoria: item.tipo,
+      imagem: item.link_imagem,
+      ingredientes: item.ingredientes,
+      modoPreparo: item.modo_preparo,
+      ingredientesBase: item.IngredientesBase?.[0]?.nomesIngrediente || [],
+    }));
+    res.json(receitas);
+
+    
+
+
+    } catch (erro) {
+        console.error("Erro ao buscar na TheMealDB:", erro.message);
+        res.status(500).json({ mensagem: "Erro ao buscar receitas externas" });
     }
-    res.json(resultado)
 };
