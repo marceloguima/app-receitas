@@ -24,28 +24,16 @@ export const perguntaReceita = async (req, res) => {
 export const listarReceitas = async (req, res) => {
     const q = (req.query.q || "").toLowerCase().trim();
 
-    // if (!q) {
-    //     return res.json([]);
-    // }
+  
 
     try {
         const response = await axios.get(
-            // "https://www.themealdb.com/api/json/v1/1/search.php?s=",
             "https://api-receitas-pi.vercel.app/receitas/todas",
 
             { params: { s : q } }
         );
 
-        // const meals = response.data.meals || [];
-
-        // const receitas = meals.map((meal) => ({
-        //     id: meal.idMeal,
-        //     titulo: meal.strMeal,
-        //     categoria: meal.strCategory,
-        //     // tempoPreparo: meal.tempoPreparo,
-        //     // porcoes: meal.porcoes,
-        //     imagem: meal.strMealThumb,
-        // }));
+    
 
  const items = Array.isArray(response.data)
       ? response.data

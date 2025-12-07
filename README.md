@@ -66,6 +66,13 @@ Para rodar o App Receitas localmente, considerando que já tenha o NODE instalad
 
 
 
+## 🗺️ Planos para evolução do projeto
+
+O App Receitas ainda está em desenvolvimento e conta com algumas melhorias planejadas para as próximas versões. 
+
+- Implementar uma **tela de detalhes da receita**, permitindo que o usuário clique em um card e visualize informações completas, como ingredientes, modo de preparo e tempo de preparo. 
+- **Separar as receitas por categoria** (entradas, prato principal, sobremesas etc.), criando filtros ou seções dedicadas na interface para facilitar a navegação. 
+- **Ajustar o formato da resposta da IA**, estruturando melhor o conteúdo gerado (título, lista de ingredientes, passos numerados e dicas finais) para deixar a leitura mais organizada e padronizada em relação às receitas da home. 
 
 
 
