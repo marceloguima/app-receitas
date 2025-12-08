@@ -3,9 +3,10 @@ import Header from "../../components/Header";
 import Card from "../../components/card";
 import { useEffect, useState } from "react";
 import apiBuscaReceitas from "../../conetaAxios/apiBuscaReceitas";
-import LoadingCard from "../../components/Loader";
+import LoaderSkeletonCard from "../../components/Loader-skeleton";
 import Modal from "../../components/Modal";
-import MensagemTemporaria from "../../components/MensagemTemporaria";
+import ModalIA from "../../components/Modal-anunc-IA";
+import Footer from "../../components/Footer";
 
 import "./home.css";
 
@@ -15,6 +16,7 @@ export default function Home() {
     const [loading, setLoading] = useState(false);
     const [alerta, setAlerta] = useState(false);
     const [tituloSecao, setatituloSecao] = useState("Receitas do dia");
+    const [mensagem, setMensagem] = useState("")
 
     useEffect(() => {
         async function carregarReceitas() {
@@ -25,6 +27,8 @@ export default function Home() {
                 setLoading(false);
                 console.log(dados);
             } catch (erro) {
+                setLoading(false)
+                setMensagem("Desculpe. Não consegui acessar o servidor.")
                 console.error("erro ao carregar receitas", erro);
                 console.log("deu erro");
             }
@@ -70,13 +74,12 @@ export default function Home() {
             <Header value={busca} onChange={setBusca} onSubmit={handleBuscar} />
             <div className="sections">
                 <section className="hero">
-                    <div className="content-left">
+                    <div className="conteudo-direito">
                         <h1>As melhores receitas você encontra aqui!</h1>
-                        {/* <img src="./publica/manjericao.png" alt="" /> */}
                     </div>
-                    <div className="circulo">
-                        <img src="./publica/prato1-hero.png" alt="" />
-                       <MensagemTemporaria texto="Oie! Eu sou o chefinho, sou uma IA treinada para criar receitas para você!" duracao={12000} intervalo={20000}/>
+                    <div className="conteudo-esquerdo">
+                        <img src="./prato1-hero.png" alt="" />
+                       <ModalIA texto="Oie! Eu sou o chefinho, sou uma IA treinada para criar receitas para você!" duracao={12000} intervalo={20000}/>
                     </div>
                 </section>
 
@@ -84,9 +87,11 @@ export default function Home() {
                     {alerta && <Modal ingrediente={busca} />}
                     <h2 className="titulo-secao">{tituloSecao}</h2>
                     <div className="cards_card">
+                        {/* mensagem para possíveis erro na busca */}
+                        {mensagem}
                         {loading
                             ? Array.from({ length: 8 }).map((_, i) => (
-                                  <LoadingCard key={i} />
+                                  <LoaderSkeletonCard key={i} />
                               ))
                             : receitas.map((receita) => (
                                   <Card
@@ -103,9 +108,7 @@ export default function Home() {
                               ))}
                     </div>
                 </section>
-                <footer>
-                    <p>Footer</p>
-                </footer>
+               <Footer />
             </div>
         </>
     );

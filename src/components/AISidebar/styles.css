@@ -1,26 +1,31 @@
-.sid-bar-close,
-.sid-bar-open {
-    height: 100vh;
+.sidbar{
+   height: 100vh;
     background: var(--quinta-cor);
     padding: 10px;
     border-right: solid 4px var(--cor-primaria);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.sid-bar-open {
-    min-width: 250px;
-    transition: ease-out .3s;
+    
+
+.sidbar-open {
+    width: 250px;
+    transition: ease-out 0.3s;
 }
 
-.sid-bar-close {
-    width: 50px;
-    transition: ease-out .3s;
+.sidbar-close {
+    width: 60px;
+    transition: ease-out 0.3s;
 }
 
-.logo {
-    margin-bottom: 40px;
+
+.btn-open-sidbar{
+    margin: 40px 0 40px 0;
 }
 
-.btn-open-sid-bar,
+.btn-open-sidbar,
 .btn-nova-receita,
 .historico,
 .links {
@@ -32,8 +37,12 @@
     align-items: center;
     gap: 10px;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 5~ç00;
     cursor: pointer;
+}
+
+.links{
+    margin-bottom: 15px;
 }
 
 .list-sid-bar {
@@ -43,21 +52,51 @@
     margin-top: 40px;
 }
 
-.historico{
-margin-top: 30px;
+.historico {
+    margin-top: 30px;
 }
-
 
 .icon-nova-receita,
 .icon-historico,
 .icon-home,
-.btn-open-sid-bar {
+.btn-open-sidbar {
     font-size: 1.6rem;
 }
 
-.lista-historico{
+.lista-historico {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 20px;
+}
+
+
+.logo-sidbar {
+    width: 70px;
+    height: 100%;
+    max-height: 80px;
+}
+ 
+
+
+.logo-sidbar img{
+    width: 100%;
+    filter: drop-shadow(1px 3px 10px var(--cor-primaria));
+
+}
+
+@media (max-width:880px) {
+    
+.sidbar-close {
+    position: relative;
+    left: -100px;
+}
+
+
+.btn-open-sidbar{
+position: relative;
+left: 100px;
+top: 20px;
+}
+
 }

@@ -27,3 +27,9 @@ body {
     height: 100%;
     width: 100vw;
 }
+
+
+/* para todas li */
+li{
+    list-style: none;
+}

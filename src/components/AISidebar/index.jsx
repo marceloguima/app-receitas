@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import Logo from "../Logo";
+
 // icones
 import { MdOutlineAddCircleOutline } from "react-icons/md";
 import { MdClose } from "react-icons/md";
@@ -10,53 +12,54 @@ import { IoHome } from "react-icons/io5";
 
 import "./styles.css";
 
-
-
 const AISidebar = () => {
-const [sidBarOpen, setSidBarOpen] = useState(false)
+    const [sidBarOpen, setSidBarOpen] = useState(false);
 
-function togleSideBar() {
+    function togleSideBar() {
         setSidBarOpen(!sidBarOpen);
     }
 
     return (
-        <aside className={sidBarOpen ? "sid-bar-open" : "sid-bar-close"}>
-            <h3 className="logo">Logo</h3>
-            <button onClick={togleSideBar} className="btn-open-sid-bar">
-                {sidBarOpen ? <MdClose /> : <RiMenuUnfoldFill />}
-            </button>
+        <aside className={sidBarOpen ? "sidbar sidbar-open" : "sidbar sidbar-close"}>
+            <Logo className="logo-sidbar" />
 
-            <ul className="list-sid-bar">
-                <li>
-                    <NavLink to="/" className="links">
-                        <IoHome className="icon-home" />
-                        {sidBarOpen ? "Home" : ""}
-                    </NavLink>
-                </li>
+            <div className="buttons">
+                <button onClick={togleSideBar} className="btn-open-sidbar">
+                    {sidBarOpen ? <MdClose /> : <RiMenuUnfoldFill />}
+                </button>
 
-                <li>
-                    <button className="btn-nova-receita">
-                        <MdOutlineAddCircleOutline className="icon-nova-receita" />
-                        {sidBarOpen ? " Nova conversa" : ""}
-                    </button>
-                </li>
-                <li>
-                    <p className="historico">
-                        {sidBarOpen ? "Histórico" : "" } 
-                    </p>
-                </li>
-            </ul>
-            {sidBarOpen ? (
-                <ul className="lista-historico">
-                    <li>Receita de bife acebolado</li>
-                    <li>Receita de bife acebolado</li>
-                    <li>Receita de bife acebolado</li>
-                    <li>Receita de bife acebolado</li>
-                    <li>Receita de bife acebolado</li>
+                <ul className="list-sidbar">
+                    <li>
+                        <NavLink to="/" className="links">
+                            <IoHome className="icon-home" />
+                            {sidBarOpen ? "Home" : ""}
+                        </NavLink>
+                    </li>
+
+                    <li>
+                        <button className="btn-nova-receita">
+                            <MdOutlineAddCircleOutline className="icon-nova-receita" />
+                            {sidBarOpen ? " Nova conversa" : ""}
+                        </button>
+                    </li>
+                    <li>
+                        <p className="historico">
+                            {sidBarOpen ? "Histórico" : ""}
+                        </p>
+                    </li>
                 </ul>
-            ) : (
-                ""
-            )}
+                {sidBarOpen ? (
+                    <ul className="lista-historico">
+                        <li>Receita de bife acebolado</li>
+                        <li>Receita de bife acebolado</li>
+                        <li>Receita de bife acebolado</li>
+                        <li>Receita de bife acebolado</li>
+                        <li>Receita de bife acebolado</li>
+                    </ul>
+                ) : (
+                    ""
+                )}
+            </div>
         </aside>
     );
 };

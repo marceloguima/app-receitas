@@ -28,7 +28,7 @@ export default function AIRecipeGenerator() {
         // 1. ADICIONAR MENSAGEM DO USUÁRIO AO CHAT
         const novaMensagemUsuario = {
             id: Date.now(),
-            remetente: "user", // Usamos 'usuario' para o CSS
+            remetente: "user", 
             texto: mensagem,
         };
 
@@ -74,6 +74,7 @@ export default function AIRecipeGenerator() {
     return (
         <>
             <AISidebar />
+            
             {console.log(<AISidebar />)}
             <main className="chat">
                 <div className="area-chat">

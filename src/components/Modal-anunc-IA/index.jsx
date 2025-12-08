@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./styles.css";
 
-const MensagemTemporaria = ({ texto, duracao, intervalo }) => {
+const ModalIA = ({ texto, duracao, intervalo }) => {
     const [visivel, setVisivel] = useState(false);
 
     useEffect(() => {
@@ -30,11 +30,11 @@ const MensagemTemporaria = ({ texto, duracao, intervalo }) => {
                     : "mensagem-anuncio-IA hiden-anunc-IA"
             }
         >
-            {visivel && 
-            <audio src="./publica/som-entrada.mp3" autoPlay></audio>
-            } 
+            {/* {visivel && 
+            <audio src="./som-entrada.mp3" autoPlay></audio>
+            }  */}
             <img
-                src="./publica/avatar-ia.png"
+                src="./avatar-ia.png"
                 alt="imagem robô"
                 className="img-robo"
             />
@@ -48,4 +48,4 @@ const MensagemTemporaria = ({ texto, duracao, intervalo }) => {
     );
 };
 
-export default MensagemTemporaria;
+export default ModalIA;

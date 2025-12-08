@@ -9,7 +9,7 @@ const ListaMensagens = ({ mensagens }) => {
                     className={`caixa-texto ${mensagem.remetente}`}
                 >
                     <img
-                        src={`./publica/avatar-${mensagem.remetente}.png`}
+                        src={`./avatar-${mensagem.remetente}.png`}
                         alt={`imagem representando o ${mensagem.remetente}`}
                         className={`avatar-${mensagem.remetente}`}
                     />

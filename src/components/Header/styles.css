@@ -16,6 +16,15 @@ nav{
   
 }
 
+.logo-home{
+   width: 80px;
+   padding-top: 10px;
+}
+
+
+.logo-home img{
+   width: 100%;
+}
 
 
 .form-buscar{

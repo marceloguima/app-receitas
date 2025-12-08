@@ -128,17 +128,13 @@ animation:animaTexto 1s alternate infinite;
 /* ---------------------------------------------------- */
 
 @media (max-width: 1200px) {
-    /* .mensagem.user,
-    .mensagem.ia {
-        width: 70%;
-    } */
+   
 }
 
 @media (max-width: 768px) {
-    /* .mensagem.user,
-    .mensagem.ia {
-        width: 90%;
-    } */
+   .area-chat{
+    padding: 5%;
+   }
 
     .avatar {
         width: 50px;

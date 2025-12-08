@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Menu from "../Menu";
+import Logo from "../Logo";
 
 // ICONES
 
@@ -11,7 +12,7 @@ const Header = (props) => {
     return (
         <header>
             <nav>
-                <div className="logo">um logo aqui</div>
+                <Logo className="logo-home"/>
                 <form className="form-buscar" onSubmit={props.onSubmit}>
                     <input
                         type="text"
