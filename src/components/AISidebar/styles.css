@@ -1,5 +1,5 @@
-.sidbar{
-   height: 100vh;
+.sidbar {
+    height: 100vh;
     background: var(--quinta-cor);
     padding: 10px;
     border-right: solid 4px var(--cor-primaria);
@@ -7,8 +7,6 @@
     flex-direction: column;
     align-items: center;
 }
-
-    
 
 .sidbar-open {
     width: 250px;
@@ -20,8 +18,7 @@
     transition: ease-out 0.3s;
 }
 
-
-.btn-open-sidbar{
+.btn-open-sidbar {
     margin: 40px 0 40px 0;
 }
 
@@ -37,11 +34,11 @@
     align-items: center;
     gap: 10px;
     font-size: 1rem;
-    font-weight: 5~ç00;
+    font-weight: 500;
     cursor: pointer;
 }
 
-.links{
+.links {
     margin-bottom: 15px;
 }
 
@@ -70,33 +67,30 @@
     margin-top: 20px;
 }
 
-
 .logo-sidbar {
     width: 70px;
     height: 100%;
     max-height: 80px;
 }
- 
 
-
-.logo-sidbar img{
+.logo-sidbar img {
     width: 100%;
     filter: drop-shadow(1px 3px 10px var(--cor-primaria));
-
 }
 
-@media (max-width:880px) {
-    
-.sidbar-close {
-    position: relative;
-    left: -100px;
+@media (max-width: 880px) {
+.sidbar{
+    position: absolute;
+    z-index: 6;
 }
 
+    .sidbar-close {
+        left: -100px;
+    }
 
-.btn-open-sidbar{
-position: relative;
-left: 100px;
-top: 20px;
-}
-
+    .btn-open-sidbar {
+        position: relative;
+        left: 120px;
+        top: -100px;
+    }
 }
