@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     height: 100vh;
-    background-image: url(./publica/imagem-error.png);
+    background-image: url(./public/imagem-error.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

@@ -1,3 +1,5 @@
+
+
 .nav-links {
     display: flex;
     gap: 50px;
@@ -27,11 +29,11 @@ a.link-ia{
     color: var(--cor-texto1);
 }
 
-a.link-ia:hover{
 
-}
 
 .btn-menu-mobile{
+    width: 40px;
+    height: 40px;
    background: transparent;
    border: none;
    color: var(--cor-texto2);
@@ -81,7 +83,7 @@ a.link-ia:hover{
        display: block;
        color: var(--cor-texto2);
        position: absolute;
-       top: 10px;
+       top: 20px;
        right: 10px;
    }
 }
