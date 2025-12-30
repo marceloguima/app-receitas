@@ -58,8 +58,12 @@ Para rodar o App Receitas localmente, considerando que já tenha o NODE instalad
 3. Criar o arquivo `.env` na raiz do projeto (`app-receitas`) e adicione a URL da API: VITE_API_URL=http://localhost:3001/api/
     
 
+4. Criar um arquivo `.env` dentro da pasta `src/services` e adicionar a chave da IA: GEMINI_API_KEY=sua_chave_de_api_aqui
 
-4. Iniciar o frontend: "npm run dev"
+Essa chave será usada pelo backend para chamar a API de IA (Gemini) através do arquivo `util.js`.
+
+
+5. Iniciar o frontend: "npm run dev"
 
 #Rodar o servidor
 5. Em outro terminal, ir para a pasta do backend "cd src/services", instalar dependências "npm install" e subir o servidor "npm run start".
