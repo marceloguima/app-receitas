@@ -3,7 +3,7 @@
     background: var(--quarta-cor);
     border: solid 1px var(--cor-primaria);
     border-radius: 10px;
-    width: 370px;
+    width: 300px;
     height: 180px;
     padding: 10px;
     display: flex;
@@ -17,11 +17,11 @@
 }
 
 .msg-balao-IA {
-    width: 280px;
+    width: 240px;
+    height: 140px;
     background: var(--quinta-cor);
     border: solid 1px var(--cor-primaria);
     color: var(--cor-texto1);
-    height: 100px;
     font-size: 1rem;
     text-align: center;
     padding: 5px;
