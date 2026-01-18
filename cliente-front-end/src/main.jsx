@@ -24,17 +24,17 @@ const router = createBrowserRouter([
 
         children: [
             {
-                path: "/",
+                index: true,
                 element: <Home />,
             },
 
             {
-                path: "/ia",
+                path: "ia",
                 element: <AIGenerator />,
             },
 
               {
-                path: "/detalhes",
+                path: "detalhes",
                 element: <DetalhesReceita />,
             },
         ],

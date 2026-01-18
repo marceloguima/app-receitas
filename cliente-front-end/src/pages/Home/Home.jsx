@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../../components/Header";
 import Card from "../../components/card";
 import { useEffect, useState } from "react";
-import apiBuscaReceitas from "../../conetaAxios/apiBuscaReceitas";
+import apiBuscaReceitas from "../../conectaAxios/apiBuscaReceitas";
 import LoaderSkeletonCard from "../../components/Loader-skeleton";
 import Modal from "../../components/Modal";
 import ModalIA from "../../components/Modal-anunc-IA";
@@ -16,9 +16,10 @@ export default function Home() {
     const [loading, setLoading] = useState(false);
     const [alerta, setAlerta] = useState(false);
     const [tituloSecao, setatituloSecao] = useState("Receitas do dia");
-    const [mensagem, setMensagem] = useState("")
+    const [mensagem, setMensagem] = useState("");
 
     useEffect(() => {
+
         async function carregarReceitas() {
             setLoading(true);
             try {
@@ -27,8 +28,8 @@ export default function Home() {
                 setLoading(false);
                 console.log(dados);
             } catch (erro) {
-                setLoading(false)
-                setMensagem("Desculpe. Não consegui acessar o servidor.")
+                setLoading(false);
+                setMensagem("Desculpe. Não consegui acessar o servidor.");
                 console.error("erro ao carregar receitas", erro);
                 console.log("deu erro");
             }
@@ -49,7 +50,7 @@ export default function Home() {
             if (dados == "") {
                 //    alert("Não encontrei nenhuma receita com " + busca)
                 setAlerta(true);
-                setatituloSecao(tituloSecao)
+                setatituloSecao(tituloSecao);
                 setTimeout(() => {
                     setAlerta(false);
                 }, 7000);
@@ -68,7 +69,6 @@ export default function Home() {
         }
     }
 
-   
     return (
         <>
             <Header value={busca} onChange={setBusca} onSubmit={handleBuscar} />
@@ -79,7 +79,11 @@ export default function Home() {
                     </div>
                     <div className="conteudo-esquerdo">
                         <img src="./prato1-hero.png" alt="" />
-                       <ModalIA texto="Oie! Eu sou o chefinho, sou uma IA treinada para criar receitas para você!" duracao={12000} intervalo={20000}/>
+                        <ModalIA
+                            texto="Oie! Eu sou o chefinho, sou uma IA treinada para criar receitas para você!"
+                            duracao={12000}
+                            intervalo={20000}
+                        />
                     </div>
                 </section>
 
@@ -93,7 +97,8 @@ export default function Home() {
                             ? Array.from({ length: 8 }).map((_, i) => (
                                   <LoaderSkeletonCard key={i} />
                               ))
-                            : receitas.map((receita) => (
+                            : Array.isArray(receitas) &&
+                              receitas.map((receita) => (
                                   <Card
                                       key={receita.id}
                                       src={receita.imagem}
@@ -105,10 +110,11 @@ export default function Home() {
                                       //   tempoPreparo={`${receita.tempoPreparo} min`}
                                       //   quantPorcoes={`${receita.porcoes} porções`}
                                   />
-                              ))}
+                              )
+                              )}
                     </div>
                 </section>
-               <Footer />
+                <Footer />
             </div>
         </>
     );

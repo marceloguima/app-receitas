@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import AISidebar from "../../components/AISidebar";
 import ListaMensagens from "../../components/ListaMensagens";
-import { apiIA } from "../../conetaAxios/apiIA";
+import { apiIA } from "../../conectaAxios/apiIA";
 
 import { BiLoaderAlt } from "react-icons/bi";
 // import { PiChefHat } from "react-icons/pi";
@@ -28,7 +28,7 @@ export default function AIRecipeGenerator() {
         // 1. ADICIONAR MENSAGEM DO USUÁRIO AO CHAT
         const novaMensagemUsuario = {
             id: Date.now(),
-            remetente: "user", 
+            remetente: "user",
             texto: mensagem,
         };
 
@@ -74,12 +74,11 @@ export default function AIRecipeGenerator() {
     return (
         <>
             <AISidebar />
-            
+
             {console.log(<AISidebar />)}
             <main className="chat">
                 <div className="area-chat">
-                <ListaMensagens mensagens={mensagens} />
-
+                    <ListaMensagens mensagens={mensagens} />
                 </div>
 
                 {loading && (
