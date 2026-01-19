@@ -21,8 +21,11 @@ app.get("/api/saudacao", (req, res) => {
 
 app.use("/api/receitas", receitasRoute);
 
-app.listen(PORT, () => {
-    console.log(`Servidor rodando na porta ${PORT}`);
-});
+// Para desenvolvimento local
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`Servidor rodando na porta ${PORT}`);
+    });
+}
 
 export default app;
